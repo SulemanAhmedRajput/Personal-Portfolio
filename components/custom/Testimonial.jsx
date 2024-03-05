@@ -15,7 +15,7 @@ export default function Testimonial() {
       id: 1,
       name: "John Doe",
       comment:
-        "Amazing work! I'm really impressed with the quality and attention to detail.",
+        "Amazing work! I&quot;m really impressed with the quality and attention to detail.",
       timestamp: "2024-02-24T08:30:00Z",
       image: "https://via.placeholder.com/150",
     },
@@ -30,7 +30,7 @@ export default function Testimonial() {
       id: 3,
       name: "Michael Johnson",
       comment:
-        "Great job! I'm impressed with the professionalism and creativity.",
+        "Great job! I&quot;m impressed with the professionalism and creativity.",
       timestamp: "2024-02-22T10:20:00Z",
       image: "https://via.placeholder.com/150",
     },
@@ -79,7 +79,6 @@ export default function Testimonial() {
                       </span>
                       <Card className="h-[150]  rounded-lg p-3 overflow-hidden mx-auto ">
                         <Image
-                          alt={"dicebear"}
                           src={`https://api.dicebear.com/7.x/bottts/svg?seed=${testimonial.name}`}
                           alt="avatar"
                           className="w-28 h-28"
