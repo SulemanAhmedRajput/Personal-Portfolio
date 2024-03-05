@@ -57,8 +57,9 @@ const Navbar = () => {
         </Link>
         <div className="flex gap-5">
           <nav className="flex gap-3 max-md:hidden">
-            {navLink.map((link) => (
+            {navLink.map((link, index) => (
               <Link
+                key={index}
                 href={link.href}
                 className=" text-sm  before:content-[''] before:bottom-0 before:bg-foreground before:w-0 before:duration-75 before:transition-[width] before:h-[2px] flex justify-center items-center before:left-0  hover:before:w-full relative before:absolute capitalize"
               >

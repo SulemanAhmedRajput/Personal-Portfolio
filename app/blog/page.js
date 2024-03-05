@@ -26,7 +26,7 @@ export default async function Home() {
   return (
     <div className="grid  gap-3 grid-cols-3 pt-20  max-md:grid-cols-2">
       {data.map((post, idx) => (
-        <Link href={`/blog/${post.currentSlug}`}>
+        <Link key={idx} href={`/blog/${post.currentSlug}`}>
           <Card key={idx}>
             <Image
               src={urlFor(post.titleImage).url()}
