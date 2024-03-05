@@ -132,6 +132,7 @@ const Project = () => {
                 <ScrollArea className="my-auto max-md:w-full max-md:hover:scale-105 h-[300px] md:hover:scale-110 max-md:mt-[-10%] bg-white hover:shadow-2xl w-3/4 md:ml-[-30%] hover:z-20 rounded-md border p-4">
                   <Image
                     className="w-full"
+                    alt="Detail of an project"
                     src={portfolioImage}
                     width={500}
                     height={500}
@@ -277,17 +278,6 @@ const Project = () => {
                     <CarouselNext />
                   </Carousel>
                 </div>
-
-                {/* {Array(3)
-                    .fill()
-                    .map(() => (
-                      <Image
-                        className="w-full mb-5 rounded-lg hover:shadow-2xl"
-                        src={portfolioImage}
-                        width={500}
-                        height={500}
-                      />
-                    ))} */}
               </div>
             ))}
       </div>
