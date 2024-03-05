@@ -59,13 +59,13 @@ const Navbar = () => {
           <div className="mr-1 text-secondary px-2 bg-foreground">Night</div>
           Cod3r
         </Link>
-        <div className="flex gap-5">
-          <nav className="flex gap-3 max-md:hidden">
+        <div className="flex gap-3">
+          <nav className="flex gap-3 max-lg:text-xs lg:text-sm max-md:hidden">
             {navLink.map((link, index) => (
               <Link
                 key={index}
                 href={link.href}
-                className=" text-sm  before:content-[''] before:bottom-0 before:bg-foreground before:w-0 before:duration-75 before:transition-[width] before:h-[2px] flex justify-center items-center before:left-0  hover:before:w-full relative before:absolute capitalize"
+                className=" before:content-[''] before:bottom-0 before:bg-foreground before:w-0 before:duration-75 before:transition-[width] before:h-[2px] flex justify-center items-center before:left-0  hover:before:w-full relative before:absolute capitalize"
               >
                 {link.label}
               </Link>

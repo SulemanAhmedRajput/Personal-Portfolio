@@ -60,7 +60,7 @@ const Hero = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="w-full px-5 max-md:flex-col  max-md:mt-10 md:h-screen flex items-center max-md:pt-32 justify-center ">
+      <div className="max-md:text-xs w-full px-5 max-md:flex-col  max-md:mt-10 md:h-screen flex items-center max-md:pt-32 justify-center ">
         <motion.div
           className="w-full flex flex-col max-md:py-20"
           initial={{ y: -50, opacity: 0 }}
@@ -68,32 +68,30 @@ const Hero = () => {
           transition={{ delay: 0.5, duration: 0.5 }}
         >
           <span>Hi I&quot;m </span>
-          <span className="  text-5xl font-bold">
+          <span className=" max-md:text-3xl text-5xl font-bold">
             <span
               before="Suleman"
-              className="relative before:content-[''] before:block before:absolute before:bottom-[-2px] before:rounded-full before:bg-gradient-to-r before:from-primary/50 before:to-primary/30 before:w-full before:h-2 before:blur-md"
+              className=" relative before:content-[''] before:block before:absolute before:bottom-[-2px] before:rounded-full before:bg-gradient-to-r before:from-primary/50 before:to-primary/30 before:w-full before:h-2 before:blur-md"
             >
               Suleman
             </span>{" "}
             Ahmed
           </span>
-          <span className="mt-5">
-            Full Stack Developer,UI/UX Designer and Engineer
-          </span>
-          <span className="flex mt-5 gap-2">
+          <span>Full Stack Developer,UI/UX Designer and Engineer</span>
+          <span className="flex mt-5 max-md:text[5px]  gap-2">
             <Link href="/">
-              <Button variant="outline" className={``}>
+              <Button variant="outline" className={`text-xs`} size="sm">
                 <Github className="mr-2 h-4 w-4" /> Github
               </Button>
             </Link>
             <Link href="/">
-              <Button variant="outline" className={``}>
+              <Button variant="outline" className={`text-xs`} size="sm">
                 <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
               </Button>
             </Link>
 
             <Link href="/">
-              <Button variant="outline" className={``}>
+              <Button variant="outline" className={`text-xs`} size="sm">
                 <Twitter className="mr-2 h-4 w-4" /> Twitter
               </Button>
             </Link>

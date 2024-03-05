@@ -173,8 +173,8 @@ const Skills = () => {
         </span>
       }
     >
-      <div>
-        <div className="flex gap-3 justify-center ">
+      <div className="max-md:text-xs">
+        <div className="flex gap-3 justify-center flex-wrap max-md:text-xs">
           <Card
             className={`flex gap-3 px-4 py-2 font-bold items-center bg-background/10`}
           >
@@ -209,7 +209,7 @@ const Skills = () => {
             <span className="text-primary/90 inline-block mb-3 mt-8 text-xl ">
               {category}
             </span>
-            <div className="flex flex-wrap gap-3 *:px-4 *:py-2 *:pr-4 text-sm *:bg-background/20  *:flex *:items-center *:gap-3 ">
+            <div className="flex flex-wrap gap-3 *:px-4 *:py-2 *:pr-4  *:bg-background/20  *:flex *:items-center *:gap-3 ">
               {skillSet[category].map((skill, index) => (
                 <Skill key={index} obj={skill} />
               ))}
