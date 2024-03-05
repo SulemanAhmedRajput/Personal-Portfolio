@@ -11,6 +11,7 @@ const AboutMe = () => {
             <div className="w-[200px]  h-[225px] rounded-lg absolute bg-foreground/10 bottom-0 -z-10 left-0 backdrop-blur-lg"></div>
 
             <Image
+              alt="Personal Image"
               src={PersonalImage}
               className="overflow-hidden z-30"
               width={200}
