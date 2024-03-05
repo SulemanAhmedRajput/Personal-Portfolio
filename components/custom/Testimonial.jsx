@@ -7,6 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Template from "./Template";
+import Image from "next/image";
 
 export default function Testimonial() {
   const testimonialData = [
@@ -77,7 +78,8 @@ export default function Testimonial() {
                         {index + 1}/{testimonialData.length}
                       </span>
                       <Card className="h-[150]  rounded-lg p-3 overflow-hidden mx-auto ">
-                        <img
+                        <Image
+                          alt={"dicebear"}
                           src={`https://api.dicebear.com/7.x/bottts/svg?seed=${testimonial.name}`}
                           alt="avatar"
                           className="w-28 h-28"
