@@ -24,7 +24,7 @@ export default async function Home() {
   const data = await getData();
 
   return (
-    <div className="grid  gap-3 grid-cols-3 pt-20 px-5  max-md:grid-cols-2">
+    <div className="grid  gap-3 grid-cols-3 pt-20 px-5 pb-5  max-md:grid-cols-2">
       {data.map((post, idx) => (
         <Link key={idx} href={`/blog/${post.currentSlug}`}>
           <Card key={idx}>
