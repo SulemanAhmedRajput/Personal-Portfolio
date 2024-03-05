@@ -19,7 +19,7 @@ async function getData(slug) {
 
 export default async function BlogArticle({ params }) {
   const data = await getData(params.singleBlog);
-  console.log(data.content)
+  console.log(data.content);
   return (
     <div className="mt-24">
       <h1>
@@ -33,6 +33,7 @@ export default async function BlogArticle({ params }) {
 
       <Image
         src={urlFor(data.titleImage).url()}
+        placeholder="blur"
         width={800}
         height={800}
         alt="Title Image"
@@ -40,14 +41,15 @@ export default async function BlogArticle({ params }) {
         className="rounded-lg mt-8 border mx-auto"
       />
       <div className="mt-16 max-w-5xl lg:ml-5 prose prose-blue  prose-lg prose-p:mx-3  dark:prose-invert prose-li:marker:text-primary prose-a:text-primary">
-        <PortableText value={data.content} 
-         serializers={{
-          code: ({ node, children }) => (
-            <pre className="overflow-x-auto rounded-md bg-gray-100 p-4">
-              <code className="text-sm">{children}</code>
-            </pre>
-          ),
-        }}
+        <PortableText
+          value={data.content}
+          serializers={{
+            code: ({ node, children }) => (
+              <pre className="overflow-x-auto rounded-md bg-gray-100 p-4">
+                <code className="text-sm">{children}</code>
+              </pre>
+            ),
+          }}
         />
       </div>
     </div>

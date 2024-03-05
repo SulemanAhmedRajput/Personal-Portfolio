@@ -30,6 +30,7 @@ export default async function Home() {
           <Card key={idx}>
             <Image
               src={urlFor(post.titleImage).url()}
+              placeholder="blur"
               alt="image"
               width={500}
               height={500}
