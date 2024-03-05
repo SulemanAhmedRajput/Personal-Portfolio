@@ -69,13 +69,7 @@ const Hero = () => {
         >
           <span>Hi I'm </span>
           <span className="  text-5xl font-bold">
-            <span
-              before="Suleman"
-              className={`relative before:content-[''] before:block before:absolute before:bottom-[-2px] before:rounded-full before:bg-gradient-to-r before:from-primary/50 before:to-primary/30 before:w-full before:h-2 before:blur-md`}
-            >
-              Suleman
-            </span>{" "}
-            Ahmed
+            <span before="Suleman">Suleman</span> Ahmed
           </span>
           <span className="mt-5">
             Full Stack Developer,UI/UX Designer and Engineer
