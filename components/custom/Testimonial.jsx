@@ -79,7 +79,7 @@ export default function Testimonial() {
                       </span>
                       <Card className="h-[150]  rounded-lg p-3 overflow-hidden mx-auto ">
                         <Image
-                          src={`https://api.dicebear.com/7.x/bottts/svg?seed=${testimonial.name}`}
+                          src={`https://placehold.com/600x400`}
                           alt="avatar"
                           className="w-28 h-28"
                         />
