@@ -67,9 +67,15 @@ const Hero = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <span>Hi I'm </span>
+          <span>Hi I&quot;m </span>
           <span className="  text-5xl font-bold">
-            <span before="Suleman">Suleman</span> Ahmed
+            <span
+              before="Suleman"
+              className="relative before:content-[''] before:block before:absolute before:bottom-[-2px] before:rounded-full before:bg-gradient-to-r before:from-primary/50 before:to-primary/30 before:w-full before:h-2 before:blur-md"
+            >
+              Suleman
+            </span>{" "}
+            Ahmed
           </span>
           <span className="mt-5">
             Full Stack Developer,UI/UX Designer and Engineer
