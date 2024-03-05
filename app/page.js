@@ -1,5 +1,6 @@
 import AboutMe from "@/components/custom/AboutMe";
 import Contact from "@/components/custom/Contact";
+import Education from "@/components/custom/Education";
 import Hero from "@/components/custom/Hero";
 import Project from "@/components/custom/Project";
 import Skills from "@/components/custom/Skills";
@@ -14,6 +15,7 @@ export default function Home() {
       <ThingILove />
       <Skills />
       <Testimonial />
+      <Education />
       {/* <Project /> */}
       <Contact />
     </main>

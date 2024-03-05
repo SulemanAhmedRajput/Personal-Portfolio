@@ -36,6 +36,10 @@ const Navbar = () => {
       href: "/#testimonial",
     },
     {
+      label: "Education",
+      href: "/#education",
+    },
+    {
       label: "Project",
       href: "/#project",
     },
