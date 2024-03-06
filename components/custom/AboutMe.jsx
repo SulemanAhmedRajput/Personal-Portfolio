@@ -19,7 +19,7 @@ const AboutMe = () => {
             />
           </div>
         </div>
-        <div className="w-4/5 text-foreground/80 text-sm leading-7 max-md:w-full px-8">
+        <div className="w-4/5 text-foreground/80 text-sm leading-7 max-md:w-full px-8 max-md:px-4">
           Greetings, I am Suleman Ahmed, a computer science graduate with solid
           experience as a full-stack web developer and more than two years of
           practical experience. My domain covers the entire MERN stack,
