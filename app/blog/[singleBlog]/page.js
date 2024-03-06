@@ -31,16 +31,17 @@ export default async function BlogArticle({ params }) {
         </span>
       </h1>
 
-      <Image
-        src={urlFor(data.titleImage).url()}
-        placeholder="blur"
-        width={800}
-        height={800}
-        alt="Title Image"
-        priority
-        className="rounded-lg mt-8 border mx-auto"
-      />
-      <div className="mt-16 max-w-5xl lg:ml-5 prose prose-blue  prose-lg prose-p:mx-3  dark:prose-invert prose-li:marker:text-primary prose-a:text-primary">
+      <div className="px-2">
+        <Image
+          src={urlFor(data.titleImage).url()}
+          width={800}
+          height={800}
+          alt="Title Image"
+          priority
+          className="rounded-lg  mt-8 border mx-auto"
+        />
+      </div>
+      <div className="mt-16 max-w-5xl lg:ml-5 max-md:px-2 prose prose-blue  prose-lg prose-p:mx-3  dark:prose-invert prose-li:marker:text-primary prose-a:text-primary">
         <PortableText
           value={data.content}
           serializers={{

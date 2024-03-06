@@ -49,8 +49,8 @@ const ThingILove = () => {
     },
   ];
   return (
-    <Template heading={`Thing I Love`} id={'thingilove'}>
-      <div className="relative px-5">
+    <Template heading={`Thing I Love`} id={"thingilove"}>
+      <div className="relative px-5 max-md:px-0">
         <div className="grid max-md:grid-cols-2 max-sm:grid-cols-1 grid-cols-3 gap-3 my-10">
           {cardList.map((card, index) => {
             return (

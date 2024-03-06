@@ -82,18 +82,18 @@ export default function Testimonial() {
 
   return (
     <Template heading={`Testimonial`} id={"testimonail"}>
-      <div className="overflow-x-auto">
+      <div className="mx-auto">
         <Carousel
           opts={{
             align: "center",
             loop: true,
           }}
-          className="relative mx-auto max-w-lg w-full max-md:max-w-sm max-sm:max-w-xs"
+          className="relative mx-auto max-w-lg w-full max-md:max-w-xs mmax-md:max-w-[80"
         >
-          <CarouselContent>
+          <CarouselContent className={`-ml-4`}>
             {testimonialData.map((testimonial, index) => (
-              <CarouselItem key={testimonial.id}>
-                <Card className="bg-background/60">
+              <CarouselItem key={testimonial.id} className={`pl-4`}>
+                <Card className="bg-background/60 w-11/12 mx-auto">
                   <CardHeader>
                     <span className="text-xs">
                       {index + 1}/{testimonialData.length}
@@ -109,8 +109,8 @@ export default function Testimonial() {
                     </div>
                   </CardHeader>
                   <CardContent className="mt-3 text-sm flex flex-col justify-center items-center">
-                    <div className="flex justify-between w-full">
-                      <span className="font-bold text-lg">
+                    <div className="flex justify-between w-full items-center">
+                      <span className="font-bold text-lg line-clamp-1">
                         {testimonial.name}
                       </span>
                       <Card className="px-6 py-2 text-xs">
@@ -125,8 +125,10 @@ export default function Testimonial() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className={`max-xs:absolute z-50 left-5`} />
-          <CarouselNext className={`max-xs:absolute right-5`} />
+          <CarouselPrevious
+            className={`max-xs:absolute z-50 max-md:left-5 left-10`}
+          />
+          <CarouselNext className={`max-xs:absolute max-md:right-5 right-10`} />
         </Carousel>
       </div>
     </Template>

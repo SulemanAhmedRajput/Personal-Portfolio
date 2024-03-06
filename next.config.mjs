@@ -6,7 +6,7 @@ const nextConfig = {
       { protocol: "https", hostname: "api.dicebear.com", port: "" },
     ],
     dangerouslyAllowSVG: true,
-    domains: ["placehold.co"],
+    // domains: ["placehold.co"],
   },
 };
 
