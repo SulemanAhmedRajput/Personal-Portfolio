@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import PersonalImage from "@/public/pi.png";
+// import PersonalImage from "@/public/pi.png";
 import Template from "./Template";
 const AboutMe = () => {
   return (
