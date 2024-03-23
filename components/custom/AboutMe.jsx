@@ -10,13 +10,13 @@ const AboutMe = () => {
           <div className="relative w-[200px] mx-auto">
             <div className="w-[200px]  h-[225px] rounded-lg absolute bg-foreground/10 bottom-0 -z-10 left-0 backdrop-blur-lg"></div>
 
-            <Image
+            {/* <Image
               alt="Personal Image"
               src={PersonalImage}
               className="overflow-hidden z-30"
               width={200}
               height={200}
-            />
+            /> */}
           </div>
         </div>
         <div className="w-4/5 text-foreground/80 text-sm leading-7 max-md:w-full px-8 max-md:px-4">
