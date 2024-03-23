@@ -8,7 +8,7 @@ const AboutMe = () => {
       <div className="flex gap-3 max-md:flex-col  justify-center">
         <div className="w-2/6 -mt-36 max-md:w-full">
           <div className="relative w-[200px] mx-auto">
-            <div className="w-[200px]  h-[225px] rounded-lg absolute bg-foreground/10 bottom-0 -z-10 left-0 backdrop-blur-lg"></div>
+            <div className="w-[200px]  h-[225px] rounded-lg  bg-foreground/10 bottom-0 -z-10 left-0 backdrop-blur-lg"></div>
 
             {/* <Image
               alt="Personal Image"
