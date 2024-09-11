@@ -1,22 +1,22 @@
 import React from "react";
 import Image from "next/image";
-// import PersonalImage from "@/public/pi.png";
+import PersonalImage from "@/public/pi.png";
 import Template from "./Template";
 const AboutMe = () => {
   return (
     <Template heading={<div>About Me</div>} id={"aboutme"}>
       <div className="flex gap-3 max-md:flex-col  justify-center">
         <div className="w-2/6 -mt-36 max-md:w-full">
-          <div className="relative w-[200px] mx-auto">
+          <div className="relative w-[200px] top-20  items-end mx-auto">
             <div className="w-[200px]  h-[225px] rounded-lg  bg-foreground/10 bottom-0 -z-10 left-0 backdrop-blur-lg"></div>
 
-            {/* <Image
+            <Image
               alt="Personal Image"
               src={PersonalImage}
-              className="overflow-hidden z-30"
+              className="overflow-hidden absolute bottom-0 z-30"
               width={200}
               height={200}
-            /> */}
+            />
           </div>
         </div>
         <div className="w-4/5 text-foreground/80 text-sm leading-7 max-md:w-full px-8 max-md:px-4">
