@@ -1,6 +1,8 @@
 import AboutMe from "@/components/custom/AboutMe";
+import Certifications from "@/components/custom/Certifications";
 import Contact from "@/components/custom/Contact";
 import Education from "@/components/custom/Education";
+import Experience from "@/components/custom/Experience";
 import Hero from "@/components/custom/Hero";
 import Project from "@/components/custom/Project";
 import Skills from "@/components/custom/Skills";
@@ -16,7 +18,10 @@ export default function Home() {
       <Skills />
       <Testimonial />
       <Education />
-      {/* <Project /> */}
+      <Experience />
+      <Certifications />
+
+      <Project />
       <Contact />
     </main>
   );

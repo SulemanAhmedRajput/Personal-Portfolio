@@ -8,6 +8,8 @@ module.exports = {
     "./src/**/*.{js,jsx}",
   ],
   prefix: "",
+
+
   theme: {
     extend: {
       colors: {
@@ -55,6 +57,10 @@ module.exports = {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
+        fadeInLeft: {
+        '0%': { opacity: 0, transform: 'translateX(-50px)' },
+        '100%': { opacity: 1, transform: 'translateX(0)' },
+      },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
@@ -63,6 +69,7 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+          fadeInLeft: 'fadeInLeft 1s ease-out',
       },
     },
   },

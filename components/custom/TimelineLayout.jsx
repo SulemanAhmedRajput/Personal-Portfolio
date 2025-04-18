@@ -4,50 +4,26 @@ import React from "react";
 import {
   Timeline,
   TimelineItem,
-  TimelineConnector,
   TimelineHeader,
   TimelineTitle,
-  TimelineIcon,
   TimelineDescription,
-  TimelineContent,
   TimelineTime,
 } from "@/components/ui/timeline";
 
 export const TimelineLayout = ({ items }) => {
   return (
-    <Timeline>
-      <TimelineItem>
-        <TimelineConnector />
-        <TimelineHeader>
-          <TimelineTime>{items[0].date}</TimelineTime>
-          <TimelineIcon />
-          <TimelineTitle>{items[0].title}</TimelineTitle>
-        </TimelineHeader>
-        <TimelineContent>
-          <TimelineDescription>{items[0].description}</TimelineDescription>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineConnector />
-        <TimelineHeader>
-          <TimelineTime>{items[1].date}</TimelineTime>
-          <TimelineIcon />
-          <TimelineTitle>{items[1].title}</TimelineTitle>
-        </TimelineHeader>
-        <TimelineContent>
-          <TimelineDescription>{items[1].description}</TimelineDescription>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineHeader>
-          <TimelineTime>{items[2].date}</TimelineTime>
-          <TimelineIcon />
-          <TimelineTitle>{items[2].title}</TimelineTitle>
-        </TimelineHeader>
-        <TimelineContent>
-          <TimelineDescription>{items[2].description}</TimelineDescription>
-        </TimelineContent>
-      </TimelineItem>
+    <Timeline className="mt-8">
+      {items.map((item) => (
+        <TimelineItem key={item.id}>
+          <TimelineHeader>
+            <TimelineTime>{item.date}</TimelineTime>
+            <TimelineTitle>{item.title}</TimelineTitle>
+          </TimelineHeader>
+          {item.description && (
+            <TimelineDescription>{item.description}</TimelineDescription>
+          )}
+        </TimelineItem>
+      ))}
     </Timeline>
   );
 };

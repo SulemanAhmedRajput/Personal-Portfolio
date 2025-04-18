@@ -1,23 +1,66 @@
-export const timelineData = [
+export const experienceData = [
   {
     id: 1,
-    title: "First event",
-    date: "2022-01-01",
+    title: "Assistant Software Engineer",
+    date: "Nov 2024 - Present",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Odio euismod lacinia at quis risus sed vulputate odio ut. Quam viverra orci sagittis eu volutpat odio facilisis mauris.",
+      "Working at Sukkur IBA University as an Assistant Software Engineer, contributing to various software projects and development.",
   },
   {
     id: 2,
-    title: "Second event",
-    date: "2022-02-01",
+    title: "Full-stack Developer (Internship)",
+    date: "Mar 2024 - May 2024",
     description:
-      "Aut eius excepturi ex recusandae eius est minima molestiae. Nam dolores iusto ad fugit reprehenderit hic dolorem quisquam et quia omnis non suscipit nihil sit libero distinctio. Ad dolorem tempora sit nostrum voluptatem qui tempora unde? Sit rerum magnam nam ipsam nesciunt aut rerum necessitatibus est quia esse non magni quae.",
+      "Completed a 2-month internship at Technics Lab where I enhanced my skills as a full-stack developer, focusing on MERN stack technologies.",
   },
   {
     id: 3,
-    title: "Third event",
-    date: "2022-03-01",
+    title: "Full-stack Developer (Full-time)",
+    date: "May 2024 - Present",
     description:
-      "Sit culpa quas ex nulla animi qui deleniti minus rem placeat mollitia. Et enim doloremque et quia sequi ea dolores voluptatem ea rerum vitae. Aut itaque incidunt est aperiam vero sit explicabo fuga id optio quis et molestiae nulla ex quae quam. Ab eius dolores ab tempora dolorum eos beatae soluta At ullam placeat est incidunt cumque.",
+      "Continued my role at Technics Lab as a full-time full-stack developer, taking on more responsibilities in the development of web applications.",
+  },
+];
+
+
+export const educationData = [
+  {
+    id: 1,
+    title: "Bachelor of Commerce (BCom)",
+    date: "2022 - 2024",
+    description:
+      "Completed my BCom at Shah Abdul Latif University, Khairpur, with a focus on enhancing my technical and business skills.",
+  },
+  {
+    id: 2,
+    title: "Bachelor of Science in Computer Science (BSCS)",
+    date: "2024 - Present",
+    description:
+      "Currently pursuing a BSCS at Sukkur IBA University, focusing on deepening my knowledge in computer science and software development.",
+  },
+];
+
+
+export const certificationData = [
+  {
+    id: 1,
+    title: "Python 3: The Big Picture",
+    date: "Issued Jan 2024",
+    description:
+      "Pluralsight certification on Python programming, covering the fundamentals and key concepts of Python 3.",
+  },
+  {
+    id: 2,
+    title: "Git & Github Fundamentals",
+    date: "Issued 2024",
+    description:
+      "Great Learning certification covering the fundamentals of Git and GitHub for version control and collaborative development.",
+  },
+  {
+    id: 3,
+    title: "MERN Stack Developer",
+    date: "Issued 2024",
+    description:
+      "Sukkur IBA certification on MERN Stack development, covering full-stack development using MongoDB, Express.js, React.js, and Node.js.",
   },
 ];
