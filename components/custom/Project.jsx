@@ -10,6 +10,7 @@ import {
   Database,
   ArrowRight,
 } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
   {
@@ -95,9 +96,10 @@ const ProjectPage = () => {
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 120 }}
           >
-            <img
+            <Image
               src={project.image}
               alt={project.title}
+              fill
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
