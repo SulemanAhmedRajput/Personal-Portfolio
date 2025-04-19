@@ -74,7 +74,7 @@ const Navbar = () => {
           <nav className="hidden max-md:block">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline">
+                <Button variant="outline" size="icon">
                   <Menu />
                 </Button>
               </DropdownMenuTrigger>

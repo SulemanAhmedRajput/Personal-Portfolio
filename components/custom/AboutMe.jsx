@@ -6,14 +6,14 @@ const AboutMe = () => {
   return (
     <Template heading={<div>About Me</div>} id={"aboutme"}>
       <div className="flex gap-3 max-md:flex-col  justify-center">
-        <div className="w-2/6 -mt-36 max-md:w-full">
-          <div className="relative w-[200px] top-20  items-end mx-auto">
-            <div className="w-[200px]  h-[225px] rounded-lg  bg-foreground/10 bottom-0 -z-10 left-0 backdrop-blur-lg"></div>
+        <div className="w-2/6 -mt-36 max-md:mt-0 max-md:w-full max-md:!h-60">
+          <div className="relative w-[200px] top-20 max-md:top-0   items-end mx-auto">
+            <div className="w-[200px]   h-[225px] max-md:h-60 rounded-lg  bg-foreground/10 bottom-0 -z-10 left-0 backdrop-blur-lg"></div>
 
             <Image
               alt="Personal Image"
               src={PersonalImage}
-              className="overflow-hidden absolute bottom-0 z-30"
+              className="overflow-hidden absolute  bottom-0 z-30"
               width={200}
               height={200}
             />
