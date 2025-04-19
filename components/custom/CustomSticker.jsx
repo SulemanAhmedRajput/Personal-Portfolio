@@ -8,9 +8,15 @@ const CustomSticker = ({ text }) => {
           writingMode: "vertical-rl" /* Top to bottom */,
           textOrientation: "mixed",
         }}
-        className=" sticky top-24 text-6xl text-primary/20 max-md:text-5xl"
+        className=" sticky top-24  text-6xl text-primary/20 max-md:text-5xl"
       >
-        {text}
+        <div className="relative">
+          <div className="w-1/2 -z-10 max-md:w-full h-full relative">
+            <div className="w-[300px]  h-[300px] shrink-0 rounded-full backdrop-blur-xl absolute -right-[115px] -top-[20px] bg-primary opacity-[1%]"></div>
+
+          </div>
+          {text}
+        </div>
       </span>
     </div>
   );

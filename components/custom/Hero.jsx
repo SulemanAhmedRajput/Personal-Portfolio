@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import PersonalImage from "@/public/pi.png";
 import {
   Github,
   Linkedin,
@@ -15,6 +16,7 @@ import {
 } from "lucide-react";
 import { Button } from "../ui/button";
 import CustomSticker from "./CustomSticker";
+import Image from "next/image";
 
 const Hero = () => {
   const portfolio = [
@@ -36,16 +38,16 @@ const Hero = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="w-full  px-4 sm:px-8 md:h-screen flex flex-col md:flex-row items-center justify-center max-md:pt-32 max-md:mt-10 gap-10">
+      <div className="w-full   px-4 sm:px-8 md:h-screen flex flex-col md:flex-row items-center justify-center max-md:pt-32 max-md:mt-10 gap-10">
         {/* LEFT SIDE */}
         <motion.div
-          className="w-full  flex flex-col py-10"
+          className="w-full flex flex-col py-10"
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
           <span className="text-muted-foreground">Hi, I'm</span>
-          <span className="text-7xl max-md:text-4xl font-bold"> 
+          <span className="text-7xl max-md:text-4xl font-bold">
             <span className="relative before:content-[''] before:block before:absolute before:bottom-[-2px] before:rounded-full before:bg-gradient-to-r before:from-primary/50 before:to-primary/30 before:w-full before:h-2 before:blur-md">
               Suleman
             </span>{" "}
@@ -75,8 +77,8 @@ const Hero = () => {
             <Button>Download CV</Button>
           </div>
         </motion.div>
+     
 
-       
       </div>
       <CustomSticker text="Developer" />
     </motion.div>
