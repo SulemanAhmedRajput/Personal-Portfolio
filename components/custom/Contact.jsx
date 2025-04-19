@@ -92,7 +92,7 @@ const Contact = () => {
       <div className="flex gap-3 max-md:flex-col">
         <div className="  w-2/5 max-md:w-full flex gap-3 flex-col ">
           <div className={` sticky top-20 flex gap-3 flex-col`}>
-            <Card className={`flex gap-3 p-3 items-center`}>
+            <Card className={`flex gap-3 !bg-card/20  backdrop-blur-md p-3 items-center`}>
               <CardHeader>
                 <CardTitle className={`flex gap-5 items-center`}>
                   <div className="w-8 h-8 border-2 border-foreground/50  flex items-center justify-center rounded-lg">
@@ -105,7 +105,7 @@ const Contact = () => {
                 </CardDescription>
               </CardHeader>
             </Card>
-            <Card className={`flex gap-3 p-3 items-center`}>
+            <Card className={`flex  !bg-card/20  backdrop-blur-md gap-3 p-3 items-center`}>
               <CardHeader>
                 <CardTitle className={`flex gap-5 items-center`}>
                   <div className="w-8 h-8 border-2 border-foreground/50  flex items-center justify-center rounded-lg">
@@ -116,7 +116,7 @@ const Contact = () => {
                 <CardDescription>sulemanahmed2704@gmail.com</CardDescription>
               </CardHeader>
             </Card>
-            <Card className={`flex gap-3 p-3 items-center`}>
+            <Card className={`flex  !bg-card/20  backdrop-blur-md gap-3 p-3 items-center`}>
               <CardHeader>
                 <CardTitle className={`flex gap-5 items-center`}>
                   <div className="w-8 h-8 border-2 border-foreground/50  flex items-center justify-center rounded-lg">
@@ -129,7 +129,7 @@ const Contact = () => {
             </Card>
           </div>
         </div>
-        <Card className="w-3/5 max-md:w-full py-10">
+        <Card className="w-3/5  !bg-card/20  backdrop-blur-md max-md:w-full py-10">
           <CardContent>
             <Form {...form}>
               <form
