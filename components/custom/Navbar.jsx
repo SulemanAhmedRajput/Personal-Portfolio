@@ -13,6 +13,7 @@ import {
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
+import Image from "next/image";
 
 const Navbar = () => {
   const navLink = [
@@ -62,9 +63,11 @@ const Navbar = () => {
     <div className="fixed top-0 left-0 w-full backdrop-blur-sm p-3 flex justify-between items-center bg-background/50 shadow-foreground/20 z-50 shadow-sm">
       <div className="max-w-5xl w-full mx-auto flex items-center justify-between">
         <Link href={"/"} className="font-bold text-3xl flex items-end">
-          <div className="mr-1 text-foreground px-2 bg-primary">Night</div>
-          Cod3r
+          {/* <div className="mr-1 text-foreground px-2 bg-primary">Suleman</div>
+          Ahm3D */}
+          <Image src={"/27856136-cropped.svg"} alt="Suleman Ahmed" width={40} height={40} />
         </Link>
+
         <div className="flex gap-3">
           <nav className="flex gap-3 max-lg:text-xs lg:text-sm max-md:hidden">
             {navLink.map((link, index) => (

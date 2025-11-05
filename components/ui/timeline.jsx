@@ -43,7 +43,7 @@ const TimelineTime = ({ className, variant = 'default', ...props }) => {
   return (
     <Badge
       className={cn(
-        'left-0 mb-3 inline-flex h-6 w-36 translate-y-0.5 items-center justify-center text-xs font-semibold uppercase sm:absolute sm:mb-0',
+        'left-0 mb-3 inline-flex h-6 w-36 whitespace-nowrap  translate-y-0.5 items-center justify-center  text-xs font-semibold uppercase sm:absolute sm:mb-0',
         className
       )}
       variant={variant}

@@ -2,78 +2,88 @@ import React from "react";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { FaCode } from "react-icons/fa6";
+import {
+  Code2,
+  BookOpen,
+  Palette,
+  Puzzle,
+  Users,
+  Lightbulb,
+} from "lucide-react";
 import Template from "./Template";
 import CustomSticker from "./CustomSticker";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 const ThingILove = () => {
   const cardList = [
     {
-      icon: <FaCode />,
-      header: `Programming`,
-      content: ` I have an unending passion for programming. From solving complex
+      icon: <Code2 size={40} />,
+      header: "Programming",
+      content: `I have an unending passion for programming. From solving complex
       problems to building elegant solutions, programming allows me to
-      express my creativity and logical thinking. Whether it's crafting
-      clean code or diving into new technologies, I find joy in every
-      aspect of the development process.`,
+      express my creativity and logical thinking.`,
     },
     {
-      icon: <FaCode />,
-      header: `Learning`,
-      content: `Learning is my constant companion. I am endlessly curious about the world around me and am always seeking to expand my knowledge. Whether it's exploring new programming languages, diving into the depths of machine learning, or discovering the intricacies of a new culture, I thrive on the journey of discovery.`,
+      icon: <BookOpen size={40} />,
+      header: "Learning",
+      content: `Learning is my constant companion. I'm endlessly curious and always
+      seeking to expand my knowledge — from exploring new technologies to
+      understanding the world around me.`,
     },
     {
-      icon: <FaCode />,
-      header: `Creativity`,
-      content: `Creativity fuels my soul. Whether it's through coding, writing, design, or any other form of expression, I find joy in bringing ideas to life. I believe that creativity is the spark that ignites innovation and drives progress, and I am committed to nurturing and cultivating it in everything I do.`,
+      icon: <Palette size={40} />,
+      header: "Creativity",
+      content: `Creativity fuels my soul. Whether it's coding, design, or writing,
+      I love bringing ideas to life and turning imagination into reality.`,
     },
     {
-      icon: <FaCode />,
-      header: `Problem Solving`,
-      content: `I am a problem solver at heart. I love tackling challenges head-on and finding innovative solutions to complex problems. Whether it's debugging code, optimizing processes, or overcoming obstacles in life, I approach every challenge with a positive attitude and a determination to succeed.`,
+      icon: <Puzzle size={40} />,
+      header: "Problem Solving",
+      content: `I love tackling challenges and finding innovative solutions. Each
+      obstacle is an opportunity to learn and grow.`,
     },
     {
-      icon: <FaCode />,
-      header: `Collaboration`,
-      content: `Collaboration is key to my success. I thrive in environments where I can work alongside talented individuals who share a common vision and goal. I believe that teamwork makes the dream work, and I am committed to fostering strong relationships and building meaningful connections with those around me.`,
+      icon: <Users size={40} />,
+      header: "Collaboration",
+      content: `Collaboration is key to growth. Working with like-minded people
+      helps me learn, share, and build something meaningful together.`,
     },
     {
-      icon: <FaCode />,
-      header: `Innovative Thinking`,
-      content:
-        "I am driven by a relentless pursuit of innovation, constantly challenging conventional wisdom and pushing the boundaries of what is possible.",
+      icon: <Lightbulb size={40} />,
+      header: "Innovative Thinking",
+      content: `I'm driven by innovation — challenging conventional ideas and
+      pushing boundaries to create something new and impactful.`,
     },
   ];
+
   return (
-    <Template heading={`Thing I Love`} id={"thingilove"}>
+    <Template heading="Things I Love" id="thingilove">
       <div className="relative px-5 max-md:px-0">
         <div className="grid max-md:grid-cols-2 max-sm:grid-cols-1 grid-cols-3 gap-3 my-10">
-          {cardList.map((card, index) => {
-            return (
-              <Card
-                key={index}
-                className={`z-20 bg-background/70 max-md:mx-5 `}
-              >
+          {cardList.map((card, index) => (
+            <BlurFade key={index} delay={0.25 * (index + 1)} inView>
+              <Card className="z-20 bg-background/70 max-md:mx-5 hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <CardTitle>
-                    <span className="rounded-full w-24 flex justify-center items-center text-5xl mb-5 h-24 border mx-auto">
+                    <span className="rounded-full w-24 h-24 border flex justify-center items-center text-primary mb-5 mx-auto bg-muted/20 hover:bg-muted transition-colors">
                       {card.icon}
                     </span>
-                    <div className="leading-6 tracking-wide">{card.header}</div>
+                    <div className="leading-6 tracking-wide text-center font-semibold">
+                      {card.header}
+                    </div>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className={`text-sm text-foreground/70`}>
+                <CardContent className="text-sm text-foreground/70 text-center">
                   {card.content}
                 </CardContent>
               </Card>
-            );
-          })}
+            </BlurFade>
+          ))}
         </div>
-        <CustomSticker text={"Things"} />
+        <CustomSticker text="Things" />
       </div>
     </Template>
   );

@@ -8,6 +8,7 @@ import Project from "@/components/custom/Project";
 import Skills from "@/components/custom/Skills";
 import Testimonial from "@/components/custom/Testimonial";
 import ThingILove from "@/components/custom/ThingILove";
+import { ScrollVelocitySection } from "@/components/custom/ScrollVelocitySection";
 
 export default function Home() {
   return (
@@ -15,12 +16,12 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <ThingILove />
+      <ScrollVelocitySection />
       <Skills />
       {/* <Testimonial /> */}
       <Education />
       <Experience />
       <Certifications />
-
       <Project />
       <Contact />
     </main>

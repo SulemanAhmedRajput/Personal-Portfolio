@@ -16,6 +16,7 @@ import { TbBrandCpp, TbBrandNextjs } from "react-icons/tb";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import { DiMongodb } from "react-icons/di";
 import Template from "./Template";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 const Skill = ({ obj: { icon, title, batch } }) => {
   const level = {
@@ -174,47 +175,51 @@ const Skills = () => {
       }
     >
       <div className="max-md:text-xs">
-        <div className="flex gap-3 justify-center flex-wrap max-md:text-xs">
-          <Card
-            className={`flex gap-3 px-4 py-2 font-bold items-center bg-background/10`}
-          >
-            <div
-              className={`w-2 h-2 rounded-lg`}
-              style={{ background: level.Beginner }}
-            ></div>
-            Beginner
-          </Card>
+        <BlurFade delay={0.25} inView>
+          <div className="flex gap-3 justify-center flex-wrap max-md:text-xs">
+            <Card
+              className={`flex gap-3 px-4 py-2 font-bold items-center bg-background/10`}
+            >
+              <div
+                className={`w-2 h-2 rounded-lg`}
+                style={{ background: level.Beginner }}
+              ></div>
+              Beginner
+            </Card>
 
-          <Card
-            className={`flex gap-3 px-4 py-2 font-bold items-center bg-background/10`}
-          >
-            <div
-              className={`w-2 h-2 rounded-lg`}
-              style={{ background: level.Intermediate }}
-            ></div>
-            Intermediate
-          </Card>
-          <Card
-            className={`flex gap-3 px-4 py-2 font-bold items-center bg-background/10`}
-          >
-            <div
-              className={`w-2 h-2 rounded-lg`}
-              style={{ background: level.Expert }}
-            ></div>
-            Expert
-          </Card>
-        </div>
-        {Object.keys(skillSet).map((category, i) => (
-          <div className="mt-5" key={i}>
-            <span className="text-primary/90 inline-block mb-3 mt-8 text-xl ">
-              {category}
-            </span>
-            <div className="flex flex-wrap gap-3 *:px-4 *:py-2 *:pr-4  *:bg-background/20  *:flex *:items-center *:gap-3 ">
-              {skillSet[category].map((skill, index) => (
-                <Skill key={index} obj={skill} />
-              ))}
-            </div>
+            <Card
+              className={`flex gap-3 px-4 py-2 font-bold items-center bg-background/10`}
+            >
+              <div
+                className={`w-2 h-2 rounded-lg`}
+                style={{ background: level.Intermediate }}
+              ></div>
+              Intermediate
+            </Card>
+            <Card
+              className={`flex gap-3 px-4 py-2 font-bold items-center bg-background/10`}
+            >
+              <div
+                className={`w-2 h-2 rounded-lg`}
+                style={{ background: level.Expert }}
+              ></div>
+              Expert
+            </Card>
           </div>
+        </BlurFade>
+        {Object.keys(skillSet).map((category, i) => (
+          <BlurFade key={i} delay={0.25 * (i + 2)} inView>
+            <div className="mt-5">
+              <span className="text-primary/90 inline-block mb-3 mt-8 text-xl ">
+                {category}
+              </span>
+              <div className="flex flex-wrap gap-3 *:px-4 *:py-2 *:pr-4  *:bg-background/20  *:flex *:items-center *:gap-3 ">
+                {skillSet[category].map((skill, index) => (
+                  <Skill key={index} obj={skill} />
+                ))}
+              </div>
+            </div>
+          </BlurFade>
         ))}
       </div>
     </Template>

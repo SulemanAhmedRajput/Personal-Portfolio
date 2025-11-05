@@ -2,33 +2,38 @@ import React from "react";
 import Image from "next/image";
 import PersonalImage from "@/public/pi.png";
 import Template from "./Template";
+import { BlurFade } from "@/components/ui/blur-fade";
 const AboutMe = () => {
   return (
     <Template heading={<div>About Me</div>} id={"aboutme"}>
       <div className="flex gap-3 max-md:flex-col  justify-center">
-        <div className="w-2/6 -mt-36 max-md:mt-0 max-md:w-full max-md:!h-60">
-          <div className="relative w-[200px] top-20 max-md:top-0   items-end mx-auto">
-            <div className="w-[200px]   h-[225px] max-md:h-60 rounded-lg  bg-foreground/10 bottom-0 -z-10 left-0 backdrop-blur-lg"></div>
+        <BlurFade delay={0.25} inView>
+          <div className="w-2/6 -mt-36 max-md:mt-0 max-md:w-full max-md:!h-60">
+            <div className="relative w-[200px] top-20 max-md:top-0   items-end mx-auto">
+              <div className="w-[200px]   h-[225px] max-md:h-60 rounded-lg  bg-foreground/10 bottom-0 -z-10 left-0 backdrop-blur-lg"></div>
 
-            <Image
-              alt="Personal Image"
-              src={PersonalImage}
-              className="overflow-hidden absolute  bottom-0 z-30"
-              width={200}
-              height={200}
-            />
+              <Image
+                alt="Personal Image"
+                src={PersonalImage}
+                className="overflow-hidden absolute  bottom-0 z-30"
+                width={200}
+                height={200}
+              />
+            </div>
           </div>
-        </div>
-        <div className="w-4/5 text-foreground/80 text-sm leading-7 max-md:w-full px-8 max-md:px-4">
-          Greetings, I am Suleman Ahmed, a Commerce graduate with solid
-          experience as a full-stack web developer and more than two years of
-          practical experience. My domain covers the entire MERN stack,
-          including NodeJS, React, Redux, HTML5, CSS3, Bootstrap, and
-          JavaScript. In backend development, I leverage the power of MongoDB to
-          create dynamic web applications. As an expert in working with RESTful
-          APIs, I guarantee seamless integration and extend the functionality of
-          projects to provide a sophisticated user experience.
-        </div>
+        </BlurFade>
+        <BlurFade delay={0.25 * 2} inView>
+          <div className="w-4/5 text-foreground/80 text-sm leading-7 max-md:w-full px-8 max-md:px-4">
+            Greetings, I am Suleman Ahmed, a Commerce graduate with solid
+            experience as a full-stack web developer and more than two years of
+            practical experience. My domain covers the entire MERN stack,
+            including NodeJS, React, Redux, HTML5, CSS3, Bootstrap, and
+            JavaScript. In backend development, I leverage the power of MongoDB to
+            create dynamic web applications. As an expert in working with RESTful
+            APIs, I guarantee seamless integration and extend the functionality of
+            projects to provide a sophisticated user experience.
+          </div>
+        </BlurFade>
       </div>
     </Template>
   );

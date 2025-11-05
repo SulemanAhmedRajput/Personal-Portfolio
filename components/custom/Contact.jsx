@@ -25,6 +25,7 @@ import {
 } from "../ui/form";
 import { Textarea } from "../ui/textarea";
 import { useToast } from "../ui/use-toast";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 const formSchema = z.object({
   username: z
@@ -92,96 +93,104 @@ const Contact = () => {
       <div className="flex gap-3 max-md:flex-col">
         <div className="  w-2/5 max-md:w-full flex gap-3 flex-col ">
           <div className={` sticky top-20 flex gap-3 flex-col`}>
-            <Card className={`flex gap-3 !bg-card/20  backdrop-blur-md p-3 items-center`}>
-              <CardHeader>
-                <CardTitle className={`flex gap-5 items-center`}>
-                  <div className="w-8 h-8 border-2 border-foreground/50  flex items-center justify-center rounded-lg">
-                    <MapIcon size={16} />
-                  </div>{" "}
-                  <div className="text-lg">Location:</div>
-                </CardTitle>
-                <CardDescription>
-                  Sukkur Township Sector#3 Street#3 Banglow#3
-                </CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className={`flex  !bg-card/20  backdrop-blur-md gap-3 p-3 items-center`}>
-              <CardHeader>
-                <CardTitle className={`flex gap-5 items-center`}>
-                  <div className="w-8 h-8 border-2 border-foreground/50  flex items-center justify-center rounded-lg">
-                    <Mail size={16} />
-                  </div>{" "}
-                  <div className="text-lg">Email:</div>
-                </CardTitle>
-                <CardDescription>sulemanahmed2704@gmail.com</CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className={`flex  !bg-card/20  backdrop-blur-md gap-3 p-3 items-center`}>
-              <CardHeader>
-                <CardTitle className={`flex gap-5 items-center`}>
-                  <div className="w-8 h-8 border-2 border-foreground/50  flex items-center justify-center rounded-lg">
-                    <MonitorSmartphone size={16} />
-                  </div>{" "}
-                  <div className="text-lg">Call:</div>
-                </CardTitle>
-                <CardDescription>+92 313-8194805</CardDescription>
-              </CardHeader>
-            </Card>
+            <BlurFade delay={0.25} inView>
+              <Card className={`flex gap-3 !bg-card/20  backdrop-blur-md p-3 items-center`}>
+                <CardHeader>
+                  <CardTitle className={`flex gap-5 items-center`}>
+                    <div className="w-8 h-8 border-2 border-foreground/50  flex items-center justify-center rounded-lg">
+                      <MapIcon size={16} />
+                    </div>{" "}
+                    <div className="text-lg">Location:</div>
+                  </CardTitle>
+                  <CardDescription>
+                    Sukkur Township Sector#3 Street#3 Banglow#3
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </BlurFade>
+            <BlurFade delay={0.25 * 2} inView>
+              <Card className={`flex  !bg-card/20  backdrop-blur-md gap-3 p-3 items-center`}>
+                <CardHeader>
+                  <CardTitle className={`flex gap-5 items-center`}>
+                    <div className="w-8 h-8 border-2 border-foreground/50  flex items-center justify-center rounded-lg">
+                      <Mail size={16} />
+                    </div>{" "}
+                    <div className="text-lg">Email:</div>
+                  </CardTitle>
+                  <CardDescription>sulemanahmed2704@gmail.com</CardDescription>
+                </CardHeader>
+              </Card>
+            </BlurFade>
+            <BlurFade delay={0.25 * 3} inView>
+              <Card className={`flex  !bg-card/20  backdrop-blur-md gap-3 p-3 items-center`}>
+                <CardHeader>
+                  <CardTitle className={`flex gap-5 items-center`}>
+                    <div className="w-8 h-8 border-2 border-foreground/50  flex items-center justify-center rounded-lg">
+                      <MonitorSmartphone size={16} />
+                    </div>{" "}
+                    <div className="text-lg">Call:</div>
+                  </CardTitle>
+                  <CardDescription>+92 313-8194805</CardDescription>
+                </CardHeader>
+              </Card>
+            </BlurFade>
           </div>
         </div>
-        <Card className="w-3/5  !bg-card/20  backdrop-blur-md max-md:w-full py-10">
-          <CardContent>
-            <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-2"
-              >
-                <FormField
-                  control={form.control}
-                  name="username"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Username</FormLabel>
-                      <FormControl>
-                        <Input placeholder="username" {...field} />
-                      </FormControl>
-                      <FormMessage className={`text-sm ml-4 `} />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input placeholder="email" {...field} />
-                      </FormControl>
+        <BlurFade delay={0.25 * 4} className={"w-3/5 "} inView>
+          <Card className="!bg-card/20  backdrop-blur-md max-md:w-full py-10">
+            <CardContent>
+              <Form {...form}>
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-2"
+                >
+                  <FormField
+                    control={form.control}
+                    name="username"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Username</FormLabel>
+                        <FormControl>
+                          <Input placeholder="username" {...field} />
+                        </FormControl>
+                        <FormMessage className={`text-sm ml-4 `} />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                          <Input placeholder="email" {...field} />
+                        </FormControl>
 
-                      <FormMessage className={`text-sm ml-4 `} />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
-                      <FormControl>
-                        <Textarea placeholder="Message" {...field} />
-                      </FormControl>
+                        <FormMessage className={`text-sm ml-4 `} />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Message</FormLabel>
+                        <FormControl>
+                          <Textarea placeholder="Message" {...field} />
+                        </FormControl>
 
-                      <FormMessage className={`text-sm ml-4 `} />
-                    </FormItem>
-                  )}
-                />
-                <Button type="submit">Submit</Button>
-              </form>
-            </Form>
-          </CardContent>
-        </Card>
+                        <FormMessage className={`text-sm ml-4 `} />
+                      </FormItem>
+                    )}
+                  />
+                  <Button type="submit">Submit</Button>
+                </form>
+              </Form>
+            </CardContent>
+          </Card>
+        </BlurFade>
       </div>
     </Template>
   );

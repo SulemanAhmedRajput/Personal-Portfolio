@@ -2,6 +2,7 @@ import React from "react";
 import Template from "./Template";
 import { TimelineLayout } from "./TimelineLayout";
 import { experienceData } from "@/public/data";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 const Experience = () => {
   return (
@@ -10,9 +11,11 @@ const Experience = () => {
       id="experience"
       headingDescription="A professional journey filled with challenges, learning, and impactful contributions."
     >
-      <div className="h-fit mx-auto w-full">
-        <TimelineLayout items={experienceData} />
-      </div>
+      <BlurFade delay={0.25} inView>
+        <div className="h-fit mx-auto w-full">
+          <TimelineLayout items={experienceData} />
+        </div>
+      </BlurFade>
     </Template>
   );
 };

@@ -11,6 +11,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Image from "next/image";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 const projects = [
   {
@@ -58,41 +59,20 @@ const projects = [
     github: "https://github.com/SulemanAhmedRajput/Dropshipping-Home-Website",
   },];
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 50 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.15,
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  }),
-};
-
 const ProjectPage = () => {
   return (
     <div className="container mx-auto py-14 px-4">
-      <motion.h1
-        className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        🚀 My Projects
-      </motion.h1>
+      <BlurFade delay={0.25} inView>
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
+          🚀 My Projects
+        </h1>
+      </BlurFade>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         {projects.map((project, i) => (
-          <motion.div
-            key={project.id}
-            className="bg-background/80 backdrop-blur-xl rounded-2xl shadow-md overflow-hidden border border-primary/20 hover:border-primary"
-            custom={i}
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
+          <BlurFade key={project.id} delay={0.25 * (i + 2)} inView>
+            <motion.div
+              className="bg-background/80 backdrop-blur-xl rounded-2xl shadow-md overflow-hidden border border-primary/20 hover:border-primary"
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 120 }}
           >
@@ -130,6 +110,7 @@ const ProjectPage = () => {
               </div>
             </div>
           </motion.div>
+          </BlurFade>
         ))}
       </div>
     </div>
