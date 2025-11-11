@@ -22,8 +22,8 @@ const projects = [
     description:
       "A sleek developer portfolio with animations, modern UI, and responsive design showcasing skills and projects effectively.",
     tech: ["React.js", "Tailwind CSS", "Framer Motion", "Vite"],
-    liveDemo: "https://nightcoder-portfolio.vercel.app",
-    github: "https://github.com/SulemanAhmedRajput/nightcoder-portfolio",
+    liveDemo: "https://suleman-ahmed.vercel.app",
+    github: "https://github.com/SulemanAhmedRajput/Personal-Portfolio",
   },
   {
     id: 2,

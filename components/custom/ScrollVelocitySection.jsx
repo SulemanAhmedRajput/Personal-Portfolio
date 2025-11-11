@@ -9,7 +9,7 @@ export function ScrollVelocitySection() {
   return (
     <BlurFade  delay={0.25} inView>
       <div className="relative flex w-full flex-col items-center justify-center  py-8">
-      <ScrollVelocityContainer className="text-lg -rotate-2 font-bold tracking-[-0.02em] md:text-4xl md:leading-[5rem] ">
+        <ScrollVelocityContainer className="text-sm -rotate-2 font-bold tracking-[-0.02em] md:text-4xl md:leading-[5rem] ">
         <ScrollVelocityRow baseVelocity={3} direction={1}>
           React · Next.js · MongoDB · Node.js · TypeScript · Python · Full Stack Developer · MERN Stack · UI/UX Designer
         </ScrollVelocityRow>
